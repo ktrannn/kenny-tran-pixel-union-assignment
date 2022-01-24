@@ -1,0 +1,64 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+/*------------------------------------*\
+	COLOR VARIABLES
+\*------------------------------------*/
+	--color_white: #fff;
+	--color_light_grey_1: #f4f4f4;
+	--color_light_grey_2: #ececec;
+	--color_medium_grey_1: #dddddd;
+	--color_medium_grey_2: #bbbbbb;
+	--color_dark_grey_1: #999999;
+	--color_dark_grey_2: #777777;
+	--color_dark_grey_3: #333333;
+	--color_black: #000;
+/*------------------------------------*\
+	SHADOW VARIABLES
+\*------------------------------------*/
+	--light_shadow: 2px 4px 7px #0000001a;
+	--medium_shadow: 2px 4px 7px #00000026;
+	--high_shadow: 2px 4px 15px #00000033;
+	--inset_shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+	--inset_dark_shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*------------------------------------*\
+	UTILITY CLASSES
+\*------------------------------------*/
+
+/* Override color styling of <a> tags to match other links */
+.v-application a {
+	@apply text-blue-500 !important;
+}
+
+.wrapper {
+	max-width: 1640px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.cursor-transition {
+	cursor: pointer;
+	transition: opacity 0.3s ease-in-out;
+	will-change: opacity;
+}
+
+.cursor-transition:hover {
+	opacity: 0.5;
+}
+
+.button {
+	padding: 12.5px 20px;
+	background: var(--color_dark_grey_1);
+	color: var(--color_white);
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
